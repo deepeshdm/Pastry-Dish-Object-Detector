@@ -1,4 +1,4 @@
-tensorflow==2.7
-numpy
-object-detection
-opencv-python
+numpy==1.19.5
+object_detection==0.1
+opencv_python_headless==4.5.3.56
+tensorflow==2.7.0

@@ -1,0 +1,49 @@
+item {
+    id: 1
+    name: 'Cutlet'
+}
+
+item {
+    id: 2
+    name: 'Egg Patis'
+}
+
+item {
+    id: 3
+    name: 'Fish Bun'
+}
+
+item {
+    id: 4
+    name: 'Fish Roti'
+}
+
+item {
+    id: 5
+    name: 'Kimbula Bun'
+}
+
+item {
+    id: 6
+    name: 'Puff Pastry'
+}
+
+item {
+    id: 7
+    name: 'Roll'
+}
+
+item {
+    id: 8
+    name: 'Sausage Bun'
+}
+
+item {
+    id: 9
+    name: 'Uludu Wade'
+}
+
+item {
+    id: 10
+    name: 'Vegetable Roti'
+}

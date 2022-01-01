@@ -96,11 +96,11 @@ import tensorflow as tf
 
 # Path to pre-trained model
 SAVED_MODEL_PATH = \
-    r'C:\Users\dipesh\Desktop\final_hasintha_jayawardana\fiverr-hasijayawardana-object-detector\saved_model'
+    r'C:\Users\dipesh\fiverr-hasijayawardana-object-detector\saved_model'
 
 # Path to 'label_map.pbtxt' file
 PATH_TO_LABELS = \
-    r'C:\Users\dipesh\Desktop\final_hasintha_jayawardana\fiverr-hasijayawardana-object-detector\label_map.pbtxt'
+    r'C:\Users\dipesh\fiverr-hasijayawardana-object-detector\label_map.pbtxt'
 
 # Object detection threshold
 THRESHOLD = 0.5

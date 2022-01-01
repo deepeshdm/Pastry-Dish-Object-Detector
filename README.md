@@ -28,7 +28,7 @@ pip install -r requirements.txt
 ## Usage Description
 
 
-The "API.py" python script contains 2 main functions responsible for object detections :
+The "API.py" python script contains 3 main functions responsible for object detections :
 
 1. detect_pastries( )
 
@@ -85,6 +85,33 @@ print(Detected_Objects)
 cv2.imshow("OUTPUT", Output_Image)
 cv2.waitKey()
 ```
+
+3. detect_webcam( ) 
+
+This function is for the webcam object detection. When you execute this function,It'll automatically activate the webcam and start detecting objects frame by frame. The current speed is 3FPS,but can be further increased by running on GPU/TPU and reducing preprocessing/postprocessing of the Images.
+
+```python
+from API import detect_webcam
+import tensorflow as tf
+
+# Path to pre-trained model
+SAVED_MODEL_PATH = \
+    r'C:\Users\dipesh\Desktop\final_hasintha_jayawardana\fiverr-hasijayawardana-object-detector\saved_model'
+
+# Path to 'label_map.pbtxt' file
+PATH_TO_LABELS = \
+    r'C:\Users\dipesh\Desktop\final_hasintha_jayawardana\fiverr-hasijayawardana-object-detector\label_map.pbtxt'
+
+# Object detection threshold
+THRESHOLD = 0.5
+
+# LOAD SAVED MODEL AND BUILD DETECTION FUNCTION
+print("Loading model...this will take a minute")
+detect_fn = tf.saved_model.load(SAVED_MODEL_PATH)
+
+detect_webcam(detect_fn, PATH_TO_LABELS, THRESHOLD)
+```
+
 
 ### NOTE : When you execute the python files, keep an eye on the terminal , it'll print the logs while the model is detecting objects.
 

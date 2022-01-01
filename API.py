@@ -49,6 +49,10 @@ def detect_pastries(image_path, saved_model_path, labelMap_path, min_threshold=0
 
     image = cv2.imread(image_path)
 
+    print("\n Resizing Image to 416x416...")
+    image = cv2.resize(image,(416,416))
+
+
     # The input needs to be a tensor, convert it using `tf.convert_to_tensor`.
     input_tensor = tf.convert_to_tensor(image)
 
@@ -149,6 +153,9 @@ def detect_objects(image_path, saved_model_path, labelMap_path, min_threshold=0.
     print('Running inference for {}... '.format(image_path), end='')
 
     image = cv2.imread(image_path)
+
+    print("\n Resizing Image to 416x416...")
+    image = cv2.resize(image,(416,416))
 
     # The input needs to be a tensor, convert it using `tf.convert_to_tensor`.
     input_tensor = tf.convert_to_tensor(image)

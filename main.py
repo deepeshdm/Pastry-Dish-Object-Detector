@@ -3,24 +3,25 @@
 """
 
 # Path to Input Image
-IMAGE_PATH = 'C:/Users/dipesh/Desktop/fiverr-hasijayawardana/train/IMG_0008.JPG'
+IMAGE_PATH = r'C:/Users/dipesh/Desktop/final_test/example images/WIN_20220101_15_10_31_Pro.jpg'
 
 # Path to pre-trained model
 SAVED_MODEL_PATH = r'C:/Users/dipesh/Desktop/fiverr-hasijayawardana/Pastry Detection/saved_model'
 
 # Path to 'label_map.pbtxt' file
-PATH_TO_LABELS = 'C:/Users/dipesh/Desktop/fiverr-hasijayawardana/Pastry Detection/label_map.pbtxt'
+PATH_TO_LABELS = r'C:/Users/dipesh/Desktop/fiverr-hasijayawardana/Pastry Detection/label_map.pbtxt'
 
 # Object detection threshold
 THRESHOLD = 0.5
 
 # Path to save the output Image with name and extension
-SAVE_PATH = r"C:/Users/dipesh/Desktop/fiverr-hasijayawardana/outputs/output.jpeg"
+SAVE_PATH = r"C:/Users/dipesh/Desktop/final_test/results/output3.jpeg"
 
 from API import detect_pastries
 detect_pastries(IMAGE_PATH, SAVED_MODEL_PATH, PATH_TO_LABELS,THRESHOLD,SAVE_PATH)
 
 """
+
 
 # ------------------------------DETECT AND RETURN LIST------------------------------------------ #
 
@@ -56,16 +57,18 @@ cv2.waitKey()
 
 # NOTE : Press "Q" on keyboard to close webcam.
 
+
+
 from API import detect_webcam
 import tensorflow as tf
 
 # Path to pre-trained model
 SAVED_MODEL_PATH = \
-    r'C:\Users\dipesh\Desktop\final_hasintha_jayawardana\fiverr-hasijayawardana-object-detector\saved_model'
+    r'C:/Users/dipesh/Desktop/final_hasintha_jayawardana/fiverr-hasijayawardana-object-detector/saved_model'
 
 # Path to 'label_map.pbtxt' file
 PATH_TO_LABELS = \
-    r'C:\Users\dipesh\Desktop\final_hasintha_jayawardana\fiverr-hasijayawardana-object-detector\label_map.pbtxt'
+    r'C:/Users/dipesh/Desktop/final_hasintha_jayawardana/fiverr-hasijayawardana-object-detector/label_map.pbtxt'
 
 # Object detection threshold
 THRESHOLD = 0.5
@@ -75,3 +78,5 @@ print("Loading model...this will take a minute")
 detect_fn = tf.saved_model.load(SAVED_MODEL_PATH)
 
 detect_webcam(detect_fn, PATH_TO_LABELS, THRESHOLD)
+
+

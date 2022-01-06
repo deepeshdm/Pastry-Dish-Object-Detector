@@ -56,7 +56,7 @@ detect_pastries(IMAGE_PATH, SAVED_MODEL_PATH, PATH_TO_LABELS,THRESHOLD,SAVE_PATH
    
 2. detect_objects( )
 
-This function takes the path of an Image with other parameters , detects the pastries present in the image and draws bounding boxes around them,after that it does'nt display the Image like the above function. It returns 2 things,first the output image as numpy array and second it returns a list of Top 10 objects detected by the model with their scores,this list can be used during production for some other task like the billing system.
+This function takes the path of an Image with other parameters , detects the pastries present in the image and draws bounding boxes around them,after that it does'nt display the Image like the above function. It returns 2 things,first the output image as numpy array and second it returns a dictionary of Top 10 objects detected by the model with their scores,this dictionary object can be used during production for some other task where we want to process the output,like the billing system.
 
 
 ```python

@@ -1,4 +1,4 @@
-numpy==1.19.5
+numpy==1.21.0
 tensorflow-object-detection-api
 opencv-python
 tensorflow==2.7.0

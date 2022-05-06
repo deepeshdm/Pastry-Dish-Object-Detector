@@ -115,7 +115,14 @@ detect_webcam(detect_fn, PATH_TO_LABELS, THRESHOLD)
 
 ### NOTE : When you execute the python files, keep an eye on the terminal , it'll print the logs while the model is detecting objects.
 
+## Important
 
+If you encounter an error - 'tensorflow has no attribute gfile' , then you'll have to make changes to your site-packages present locally.
+- Follow this : https://github.com/tensorflow/tensorflow/issues/31315
+- A quick fix for this is to put the following line after you import tensorflow:
+```python
+tf.gfile = tf.io.gfile
+```
 
 
 
